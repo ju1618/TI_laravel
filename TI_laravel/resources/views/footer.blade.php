@@ -27,13 +27,13 @@
         <ol>
           <hr>
           <li> <a href="index.php">Home</a> </li>
-          <?php if (!isLogged()) { ?>
+          @if (!Auth::user())
             <li> <a href="login.php">Ingresar</a> </li>
             <li> <a href="registrer.php">Registrarse</a> </li>
-          <?php }else {?>
+          @else
             <li> <a href="perfilusuario.php">Perfil</a> </li>
             <li> <a href="logout.php">Cerrar Sesión</a> </li>
-          <?php }?>
+          @endif
           <li> <a href="faqs.php">FAQ</a> </li>
         </ol>
       </div>

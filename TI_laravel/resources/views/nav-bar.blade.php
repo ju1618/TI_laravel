@@ -16,24 +16,24 @@
       <li class="nav-item active">
         <a class= "nav-link" href="index.php">Home </a>
       </li>
-      <!-- <li class="nav-item active">
+      <li class="nav-item active">
         <a class= "nav-link" href="#">Productos</a>
-      </li> -->
-      <?php if (!isLogged()) { ?>
+      </li>
+      @if (Auth::user())
         <li class="nav-item">
           <a class= "nav-link" href="login.php">Ingresar</a>
         </li>
         <li class="nav-item">
           <a class= "nav-link" href="registrer.php">Registrarse</a>
         </li>
-      <?php }else {?>
+      @else
         <li class="nav-item">
           <a class= "nav-link" href="perfilusuario.php">Perfil</a>
         </li>
         <li class="nav-item">
           <a class= "nav-link" href="logout.php">Cerrar Sesión</a>
         </li>
-      <?php }?>
+      @endif
 
       <li class="nav-item">
         <a class= "nav-link" href="faqs.php">FAQ</a>

@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 
-    <?php   require_once 'head.blade.php' ?>
+    @require_once ('head.blade.php');
     <link rel="stylesheet" href="css/stylefaq.css">
   </head>
 
 <body class="faq-cuerpo">
 
-    <?php require_once 'nav-bar.balde.php'; ?>
+    @require_once('nav-bar.balde.php');
 
 <!--                        inicio de contenido FAQ            -->
 <div class="accordion faq-tema" id="sesion">
@@ -124,6 +124,6 @@
 
   </body>
 
-  <?php require_once('footer.blade.php'); ?>
+  @require_once('footer.blade.php');
 
 </html>
