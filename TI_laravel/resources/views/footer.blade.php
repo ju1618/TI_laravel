@@ -1,6 +1,5 @@
 <footer class="container mx-auto st-footer col-12">
 
-
   <div class="redes d-flex justify-content-center">
       <div class="mis-redes-sociales align-self-center">
         <br>

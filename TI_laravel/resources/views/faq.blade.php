@@ -1,15 +1,8 @@
-<?php  $pageTitle = "Preguntas Frecuentes" ?>
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
+@section ('pageTitle','Preguntas Frecuentes')
 
-    @require_once ('head.blade.php');
-    <link rel="stylesheet" href="css/stylefaq.css">
-  </head>
+@extends('layouts.template')
 
-<body class="faq-cuerpo">
-
-    @require_once('nav-bar.balde.php');
-
+@section('content')
 <!--                        inicio de contenido FAQ            -->
 <div class="accordion faq-tema" id="sesion">
   <h4>Configuracion de Cuenta</h4>
@@ -121,9 +114,4 @@
 </div>
 
 <!--                       FIN de contenido  FAQ                -->
-
-  </body>
-
-  @require_once('footer.blade.php');
-
-</html>
+@endsection
