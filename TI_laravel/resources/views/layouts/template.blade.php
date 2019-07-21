@@ -57,7 +57,7 @@
           @endif
 
           <li class="nav-item">
-            <a class= "nav-link" href="faqs.php">FAQ</a>
+            <a class= "nav-link" href="/faq">FAQ</a>
           </li>
         </ul>
       </div>

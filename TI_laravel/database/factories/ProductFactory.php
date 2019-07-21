@@ -1,7 +1,9 @@
 <?php
 
 use App\Product;
+use Illuminate\Support\Str;
 use Faker\Generator as Faker;
+
 $factory->define(Product::class, function (Faker $faker) {
 	// Ruta en donde queremos subir las imágenes
 	$filePath = storage_path('app/public/products');
