@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->bigInteger('price');
-            $table->string('image');
+            $table->string('product_img');
             $table->string('category');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
