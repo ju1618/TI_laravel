@@ -10,7 +10,9 @@ $factory->define(Product::class, function (Faker $faker) {
 	return [
     'name' => $faker->sentence(5, true),
     'price' => $faker->randomFloat(2, 100, 999999),
-		'image' => $faker->image($filePath, 400, 300, null, false),
-    'category' => $faker->randomElement($array = array ('Cocina','Oficina','Hogar'))
+		'image' => $faker->imageUrl($width = 640, $height = 480,'cats'),
+		// 'image' => $faker->image($filePath(), 400, 300, null, false),
+    'category' => $faker->randomElement($array = array ('Cocina','Oficina','Hogar')),
+		'user_id'=> $faker->randomDigitNotNull
   ];
 });
