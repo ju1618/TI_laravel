@@ -5,13 +5,15 @@ use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
 $factory->define(Product::class, function (Faker $faker) {
+	
 	// Ruta en donde queremos subir las imágenes
-	$filePath = storage_path('app/public/products');
+	$filePath = storage_path('app/public/product_imgs');
+
 	return [
     'name' => $faker->sentence(3, true),
     'price' => $faker->randomFloat(2, 100, 999999),
-		'product_img' => $faker->imageUrl($width = 640, $height = 480,'cats'),
-		// 'image' => $faker->image($filePath(), 400, 300, null, false),
+		// 'product_img' => $faker->imageUrl($width = 640, $height = 480,'cats'),
+		'product_img' => $faker->image($filePath, 400, 300, null, false),
     'category' => $faker->randomElement($array = array ('Cocina','Oficina','Hogar')),
 		'user_id'=> $faker->randomDigitNotNull
   ];

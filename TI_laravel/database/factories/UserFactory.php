@@ -17,13 +17,16 @@ use Faker\Generator as Faker;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+  // Ruta en donde queremos subir las imágenes
+  	$filePath = storage_path('app/public/avatars');
+
     return [
       'name' => $faker->name,
       'email' => $faker->unique()->safeEmail,
       'email_verified_at' => now(),
       'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-      'avatar' => $faker->imageUrl($width = 640, $height = 480),
-      // 'avatar' => $faker->image($filePath(), 300, 300, null, false),
+      // 'avatar' => $faker->imageUrl($width = 640, $height = 480),
+      'avatar' => $faker->image($filePath, 300, 300, null, false),
       'country' => $faker->country,
       'remember_token' => Str::random(10),
     ];
