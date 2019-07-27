@@ -10,10 +10,11 @@ $factory->define(Product::class, function (Faker $faker) {
 	$filePath = storage_path('app/public/product_imgs');
 
 	return [
-    'name' => $faker->sentence(3, true),
+    'title' => $faker->sentence(3, true),
     'price' => $faker->randomFloat(2, 100, 999999),
-		'product_img' => $faker->image($filePath, 400, 300, null, false),
+		'product-image' => $faker->image($filePath, 400, 300, null, false),
     // 'category' => $faker->randomElement($array = array ('Cocina','Oficina','Hogar')),
+		'description'=> $faker->sentence(10, true),
 		'user_id'=> $faker->randomDigitNotNull
   ];
 });

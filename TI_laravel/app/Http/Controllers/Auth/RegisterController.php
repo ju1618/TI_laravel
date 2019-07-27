@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -35,6 +34,11 @@ class RegisterController extends Controller
      *
      * @return void
      */
+
+
+
+
+
     public function __construct()
     {
         $this->middleware('guest');
@@ -49,10 +53,22 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+            'username' => 'required|string|max:30',
+            'password' => 'required|string|min:5|confirmed|regex:/DH/',
+            'name' => 'required|string|max:50',
+            'lastname' => 'required|string|max:50',
+            'email' => 'required|string|email|max:50|unique:users',
+            'country' => 'required|string|max:50',
+            'avatar' => 'required|image',
+
+        ] , [
+					'required' => 'El campo :attribute es obligatorio',
+					'password.min' => 'La contraseña debe tener al menos 5 caracteres',
+          'password.confirmed' => 'Las contraseñas deben coincidir',
+          'password.regex' => 'La contraseña debe contener al menos una D y H seguidas'
+				]);
+
+
     }
 
     /**
@@ -63,10 +79,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+      $request = request();
+      $profileImage = $request->file('avatar');
+      $profileImageName = uniqid('img-') . '.' . $profileImage->extension();
+      $profileImage->storePubliclyAs("public/avatars", $profileImageName);
+
         return User::create([
+            'username' => $data['username'],
+            'password' => bcrypt($data['password']),
             'name' => $data['name'],
+            'lastname' => $data['lastname'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'country' => $data['country'],
+            'avatar' => $data['avatar'],
+
         ]);
     }
+
+
+
 }
