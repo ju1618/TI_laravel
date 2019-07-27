@@ -47,7 +47,7 @@
   <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
   <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false"> -->
   <div class="category">
-    <h3 class="title-product text-left" id="perros-balanced">Alimento de Perros</h3>
+    <h3 class="title-product text-left" id="perros-balanced">Cocina</h3>
   </div>
     <ol class="carousel-indicators">
      @foreach( $products as $photo )
@@ -65,7 +65,7 @@
                 </div> -->
 
                  <div class="card products" >
-                   <img src="/storage/posters/{{ $product->image }}" class="card-img-top" />
+                   <img src="/storage/posters/{{ $product->product-image }}" class="card-img-top" />
                    <div class="card-body">
                      <h1 class="card-title">{{$product->title}}</h1>
                      <h5>$ {{$product->price}}</h5>
