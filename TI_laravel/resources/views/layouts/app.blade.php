@@ -18,14 +18,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body style="background-color: rgb(60, 123, 246);">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                <div class="navbar-brand">
+                    <!-- {{ config('app.name', 'Laravel') }} -->
+                    <!-- <strong>e-Commerce</strong> -->
+                    <img src="/images/logo-brufood2.png" alt="" class="rounded-circle" width="160px;">
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Rutas de Products
+Route::get('/',  'ProductsController@index');
+Route::get('/products/addProduct', 'ProductsController@create');
+Route::post('/products/addProduct', 'ProductsController@store');
+
 
 Route::get('/faq', 'FaqController@index');
 
