@@ -28,7 +28,6 @@ $factory->define(User::class, function (Faker $faker) {
       'email' => $faker->unique()->safeEmail,
       'email_verified_at' => now(),
       'country' => $faker->country,
-      // 'avatar' => $faker->imageUrl($width = 640, $height = 480),
       'avatar' => $faker->image($filePath, 300, 300, null, false),
       'remember_token' => Str::random(10),
     ];

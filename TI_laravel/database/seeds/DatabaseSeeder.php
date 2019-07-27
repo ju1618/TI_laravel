@@ -13,12 +13,12 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
 			$users = factory(App\User::class)->times(15)->create();
 			$products = factory(App\Product::class)->times(30)->create();
-			$categories = factory(App\Category::class)->times(10)->create();
+			// $categories = factory(App\Category::class)->times(10)->create();
 
-			foreach ($products as $oneProduct) {
-				$oneProduct->user()->associate($users->random(1)->first()->id);
-				$oneProduct->category()->associate($categories->random(1)->first()->id);
-				$oneProduct->save();
-			}
+			// foreach ($products as $oneProduct) {
+			// 	$oneProduct->user()->associate($users->random(1)->first()->id);
+			// 	$oneProduct->category()->associate($categories->random(1)->first()->id);
+			// 	$oneProduct->save();
+			// }
     }
 }
