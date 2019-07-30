@@ -47,7 +47,7 @@
   <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
   <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false"> -->
   <div class="category">
-    <h3 class="title-product text-left" id="perros-balanced">Cocina</h3>
+    <h3 class="title-product text-left" id="cocina">Cocina</h3>
   </div>
     <ol class="carousel-indicators">
      @foreach( $products as $photo )
@@ -92,11 +92,16 @@
       <span class="sr-only">Next</span>
     </a> -->
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <img src="/images/arrow-left.svg">
+      <div class="arrow-control-pr">
+          <img src="/images/arrow-left.svg">
+      </div>
+
     </a>
 
     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <img src="/images/arrow-right.svg">
+      <div class="arrow-control-pr">
+          <img src="/images/arrow-right.svg">
+      </div>
     </a>
   </div>
 

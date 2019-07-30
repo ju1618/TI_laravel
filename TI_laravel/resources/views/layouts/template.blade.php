@@ -64,7 +64,7 @@
     </nav>
     <!-- FIN DEL NAVBAR -->
 
-
+    @include ('products.index')
     @yield('content')
 
 
