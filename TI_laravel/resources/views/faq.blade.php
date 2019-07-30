@@ -4,6 +4,76 @@
 
 @section('content')
 <!--                        inicio de contenido FAQ            -->
+<style media="screen">
+
+  .card {
+    width: 100%;
+  }
+  body{
+    font-family: "Fira Sans", sans-serif; /*esto es para que si no carga la tipografia roboto me cargue la sans-serif*/
+    background-image: url("../images/colorclaro.jpg");
+    background-color: rgba(75,145,214,0.11);
+    background-size:cover;
+  }
+  a{
+    text-decoration: none;
+    color: inherit; /*esto significa que esta heredando el color de su padre*/
+    display: inline-block; /*para que tome los margenes y no ocupe todo el ancho, esto lo uso por default*/
+  }
+  .container{
+    margin-top: 140px;
+  }
+  .faq-tema{
+    margin-top: 15px;
+    color: rgb(75,145,214);
+  }
+  .faq-respuesta{
+    background-color: grey;
+    text-align: right;
+  }
+  .faq-cuerpo{
+    padding-top: 110px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(75,145,214,0.11);
+    background-size:cover;
+  }
+  .faq-pregunta-contenedor{
+    background-size:cover;
+    background-color: rgba(207,23,81);
+    padding: inherit;
+    width: 100vw;
+  }
+  .faq-pregunta{
+    background-size:cover;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    margin: 0;
+   }
+
+   .faq-pregunta:hover{
+     color: rgb(75,209,182);
+   }
+
+  .faq-respuesta{
+    color: #000;
+    text-align: left;
+  }
+  .faq-respuesta li{
+    list-style: initial;
+    margin-left: 2%;
+  }
+
+  .faq-respuesta a {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+</style>
+<div class="container">
+
 <div class="accordion faq-tema" id="sesion">
   <h4>Configuracion de Cuenta</h4>
   <div class="card card-faq">
@@ -24,6 +94,7 @@
       </div>
     </div>
   </div>
+
   <div class="card card-faq">
     <div class="card-header faq-pregunta-contenedor" id="headingCambioContrasenia">
       <h2 class="mb-0">
@@ -36,7 +107,7 @@
       <div class="card-body faq-respuesta">
         ¡Modificar tu contraseña es muy fácil! Sólo tenés que seguir estos simples pasos:
         <ol>
-          <li>Si es que no iniciaste sesión, ingresá a tu <strong><a class="nav-link active"  href="login.php">cuenta</a></strong></li>
+          <li>Si es que no iniciaste sesión, ingresá a tu <strong><a class="nav-link active"  href="login">cuenta</a></strong></li>
           <li>Una vez que estés dentro de tu cuenta, hacé clic en "Mi Perfil".</li>
           <li>En el campo "Contraseña" hacé clic en "Cambiar".</li>
           <li>Ingresá y confirmá tu nueva contraseña, hacé clic en "Enviar" y ¡Listo!.</li>
@@ -76,7 +147,7 @@
       <div class="card-body faq-respuesta">
         Para poder publicar y gestionar tus avisos correctamente, necesitás registrar tu correo.
 
-        Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="registrer.php">link</a></strong> y completá los datos.<br>
+        Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="register">link</a></strong> y completá los datos.<br>
         <strong>Pasos para publicar tu anuncio:</strong>
         <ol>
           <li>Seleccioná "Ingresar" en el menú de navegación, en el margen superior, y completá los campos con tu mail y contraseña.</li>
@@ -111,6 +182,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!--                       FIN de contenido  FAQ                -->
