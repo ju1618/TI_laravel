@@ -15,6 +15,11 @@ class DatabaseSeeder extends Seeder
       $categories = factory(App\Category::class)->times(10)->create();
 			$products = factory(App\Product::class)->times(30)->create();
 
+      foreach ($users as $user){
+        if ($user->country == 'Argentina'){
+          $user->state='Buenos Aires';
+        }
+      }
 
 			foreach ($products as $oneProduct) {
 				$oneProduct->user()->associate($users->random(1)->first()->id);
