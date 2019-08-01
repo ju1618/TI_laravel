@@ -1,4 +1,28 @@
 <?php
+// $provincias = ['Capital Federal',
+// 'Buenos Aires',
+// 'Catamarca',
+// 'Chaco',
+// 'Chubut',
+// 'Córdoba',
+// 'Corrientes',
+// 'Entre Ríos',
+// 'Formosa',
+// 'Jujuy',
+// 'La Pampa',
+// 'La Rioja',
+// 'Mendoza',
+// 'Misiones',
+// 'Neuquén',
+// 'Río Negro',
+// 'Salta',
+// 'San Juan',
+// 'San Luis',
+// 'Santa Cruz',
+// 'Santa Fe',
+// 'Santiago Del Estero',
+// 'Tierra Del Fuego',
+// 'Tucuman'];
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
@@ -28,6 +52,8 @@ $factory->define(User::class, function (Faker $faker) {
       'email' => $faker->unique()->safeEmail,
       'email_verified_at' => now(),
       'country' => $faker->country,
+      'state'=> $faker->state,
+      // 'state'=> $faker->randomElement($provincias),
       'avatar' => $faker->image($filePath, 300, 300, null, false),
       'remember_token' => Str::random(10),
     ];

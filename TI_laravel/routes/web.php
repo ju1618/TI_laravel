@@ -19,7 +19,8 @@
 Route::get('/',  'ProductsController@index');
 Route::get('/products/addProduct', 'ProductsController@create');
 Route::post('/products/addProduct', 'ProductsController@store');
-
+Route::get('/buscar',  'ProductsController@buscar');
+Route::get('/listado',  'ProductsController@listado');
 
 Route::get('/faq', 'FaqController@index');
 

@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="/css/styles-footer.css">
     </head>
   <body>
-    <!-- INICIO DEL NAV BAR -->
+
+    <!-------------- INICIO DEL NAV BAR ----------->
     <nav class="main-nav navbar fixed-top navbar navbar-expand-lg navbar-light">
       <a class= "navbar-brand" href="index.php">
         <img class="logo navbar-brand" src="images/logo1.png" alt="logo tu empresa">
@@ -62,13 +63,14 @@
         </ul>
       </div>
     </nav>
-    <!-- FIN DEL NAVBAR -->
+    <!-- ------------ FIN DEL NAVBAR -------- -->
 
-    @include ('products.index')
+
     @yield('content')
 
 
   </body>
+  <!--         INICIO FOOTER             -->
   <footer class="container mx-auto st-footer col-12">
 
     <div class="redes d-flex justify-content-center">
@@ -137,9 +139,8 @@
       <p class="float-right footer-link" style="color: #000;"><a href="#">-Volver arriba-</a></p>
     </div>
 
-
-
   </footer>
+  <!--         FIN FOOTER             -->
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

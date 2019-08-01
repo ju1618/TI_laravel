@@ -116,6 +116,22 @@ class ProductsController extends Controller
         //
     }
 
+    public function buscar(Request $request)
+    {
+      $input = $request->all();
+
+      if($request->get('busqueda')){
+          $productos = Product::where("title", "LIKE", "%{$request->get('busqueda')}%")
+              ->paginate(5);
+      }
+      // else{
+      //     $productos = Product::paginate(5);
+      // }
+
+      // return response($productos);
+
+      return view('buscador');
+    }
     /**
      * Remove the specified resource from storage.
      *
