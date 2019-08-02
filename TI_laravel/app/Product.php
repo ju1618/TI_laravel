@@ -13,7 +13,7 @@ class Product extends Model
 {
   use Searchable;
   protected $fillable = [
-      'title', 'product-image', 'price', 'category_id', 'description', 'user_id'
+      'title', 'product-image', 'price', 'category_id', 'description', 'user_id', 'slug'
   ];
 
 // RELACIONES
