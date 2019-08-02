@@ -3,7 +3,6 @@
 @extends('layouts.template')
 
 @section('content')
-
 <style media="screen">
   .container{
       margin-top: 140px;
@@ -12,38 +11,46 @@
 
 <div class="container">
 
-  <?php
-  if (isset($_POST["id"])) {
-  	mostrarPropiedades($_POST["id"]);
-  } else {
-  	echo 'Ir al Buscador';
-  	echo '<a href="buscador"> volver al buscador </a>';
-  }
+  <!-- check if $buscar variable is set, display buscar result -->
+    @if (isset($producto))
+        <div class="panel panel-success">
+            <div class="panel-heading">Resultado de la busqueda</div>
+            <div class="panel-body">
 
-  function mostrarProductos($nombre_prod){
-  	$conexion = mysqli_connect("127.0.0.1", "ju", "", "Contra1234");
+                <div class='table-responsive'>
+                  <table class='table table-bordered table-hover'>
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Imagen</th>
+                        <th>precio</th>
+                        <th>descripcion</th>
 
-  	echo '<h1>';
-  	echo 'Productos encontrados con: '.'"'.$nombre_prod.'"';
-  	echo '<br>';
-  	echo '</h1>';
+                      </tr>
+                    </thead>
+                    <tbody>
 
-  	$q = "SELECT * FROM products WHERE title LIKE '%$nombre_prod%'";
-  	$resultado = mysqli_query($conexion, $q);
+                    @foreach($producto as $productos)
+                        <tr>
+                            <td>{{$productos['title']}}</td>
+                            <td>{{$productos['image']}}</td>
+                            <td>{{$productos['price']}}</td>
+                            <td>{{$productos['description']}}</td>
 
-  	echo '<div class="contenido">';
-  	while ($row = mysqli_fetch_array($resultado)) {
-  		echo '<div class="caja">';
-  		echo '<h2>'.$row['title'].'</h2>';
-  		echo '<p>'.$row['descripcion'].'</p>';
-  		echo '<h4>'.$row['price'].'</h4>';
-  		// echo '<a href="ficha.php?p='.$row['codigo'].'"> ver más </a>';
-  		echo '<br><br>';
-  		echo '</div>';
-  	}
-  	echo '</div>';
-  }
-  ?>
+                        </tr>
+                    @endforeach
+
+                    </tbody>
+                        </table>
+                        <center>{{ $producto->appends(Request::only('title','price'))->links() }}</center>
+                    </div>
+
+            </div>
+            <div class="panel-footer">
+                <a href="/" class="btn btn-warning">Volver al Home</a>
+            </div>
+        </div>
+    @endif
 
 </div>
 

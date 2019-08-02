@@ -15,6 +15,7 @@ class ProductsController extends Controller
     public function index()
     {
         //
+
          $products=Product::all();
 
         // return view('products.index', compact('products'));
@@ -116,21 +117,31 @@ class ProductsController extends Controller
         //
     }
 
-    public function buscar(Request $request)
+    public function buscar()
+    {
+      // $posts = Product::where('title', 'like', '%'.Input::get('search').'%')
+      //           ->orWhere('description', 'like', '%'.Input::get('search').'%')
+      //           ->orderBy('id', 'desc')->paginate(6);
+
+      return view('buscar');
+    }
+
+    public function listar(Request $request)
     {
       $input = $request->all();
 
-      if($request->get('busqueda')){
-          $productos = Product::where("title", "LIKE", "%{$request->get('busqueda')}%")
-              ->paginate(5);
+      if($request->get('search')){
+          $producto = Product::where("title", "LIKE", "%{$request->get('search')}%")
+              ->paginate(50);
+        return view('listado', compact('producto'));
       }
-      // else{
-      //     $productos = Product::paginate(5);
-      // }
+      //else{
+      //  $noticias = Noticia::paginate(5);
+      //}
 
-      // return response($productos);
+      // return response($noticias);
+      return view('listado');
 
-      return view('buscador');
     }
     /**
      * Remove the specified resource from storage.

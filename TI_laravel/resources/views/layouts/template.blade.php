@@ -61,6 +61,10 @@
             <a class= "nav-link" href="/faq">FAQ</a>
           </li>
         </ul>
+        <form class="d-flex align-items-center" method="get" action="/listado">
+      		<input type="text" name="search" required="required">
+      		<input type="submit" class="btn btn-primary" value="Buscar">
+      	</form>
       </div>
     </nav>
     <!-- ------------ FIN DEL NAVBAR -------- -->
