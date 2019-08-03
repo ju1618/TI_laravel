@@ -2,7 +2,7 @@
 @section ('pageTitle','Perfil')
 
 @extends('layouts.template')
-<!--Vinculación externa de CSS-->
+<!-- Vinculación externa de CSS-->
 <link rel="stylesheet" href="/css/perfilusuario.css">
 @section('content')
 
@@ -10,10 +10,8 @@
     <div class="contenedorprincipal">
       <img class="fondoperfil" src="images.fondoperfil.jpg" >
        <div class="contenedor1">
-          <br>
-          <center><img class="fotousuario" src="{{ $user->avatar }}"  alt="foto del usuario"></center>
-
-
+           <br>
+           <!-- <center><img class="fotousuario" src="{{ $user->avatar }}"  alt="foto del usuario"></center> -->
 							  <br>
                 <h1><center>Mi Perfil, {{ $user->name }}</center></h1>
                  <br>
