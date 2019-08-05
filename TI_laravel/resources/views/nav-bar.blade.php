@@ -24,7 +24,7 @@
           <a class= "nav-link" href="login.php">Ingresar</a>
         </li>
         <li class="nav-item">
-          <a class= "nav-link" href="registrer.php">Registrarse</a>
+          <a class= "nav-link" href="register.php">Registrarse</a>
         </li>
       @else
         <li class="nav-item">

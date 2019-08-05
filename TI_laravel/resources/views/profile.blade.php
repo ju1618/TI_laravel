@@ -6,7 +6,134 @@
 <link rel="stylesheet" href="/css/perfilusuario.css">
 
 @section('content')
-<!---Estilo del javascript aplicado  a la factura-->
+
+<!-- Css de profile-->
+<style media="screen">
+  .card{
+    width: 100%;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family:'Fira Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    padding-top: 100px;
+    background-image: url("../images/gg.jpg");
+    background-size: cover;
+  }
+
+  img{
+    width: 100%;/*para que tenga el ancho de us contenedor*/
+  }
+
+
+  .fotousuario {
+   width: 40%;
+   height: auto;
+  }
+
+
+  .container {
+      position: relative;
+      width: 100vw;
+      margin-top: 10%;
+      overflow: auto;
+  }
+
+  .contenedor1 {
+    width: 28vw ;
+    background-color: #4bd1b6;
+    float: left;
+    clear: both;
+    padding: 8px;
+    margin: 8px;
+    height: 1700px;
+    border-radius: 10px 10px;
+    text-align: center;
+    overflow: hidden;
+    border: 10px solid #F52854;
+  }
+
+  .contenedor2 {
+    width: 49vw;
+    background-color: rgba(75,145,214,0.11);
+    float: right;
+    padding: 4px;
+    margin: 5px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 10px 10px;
+    border: 10px solid #F52854;
+  }
+
+  .item {
+    font-size: 24px;
+    color: black;
+  }
+
+  .contenedor3 {
+    width: 49vw;
+    float: right;
+    background-color: beige;
+    padding: 20px;
+    margin: 10px;
+    height: 440px;
+    border: 10px solid #F52854;
+    overflow: hidden;
+    border-radius: 10px 10px;
+  }
+
+  .contenedor4 {
+    width: 49vw;
+    float: right;
+    background-color: #F52854;
+    padding: 15px;
+    margin: 8px;
+    height: 550px;
+    border: 10px solid #F52854;
+    overflow: hidden;
+    border-radius: 10px 10px;
+  }
+
+
+  .facturadecompra {
+    width: 49%;
+    height: auto;
+  }
+
+  .contenedor5 {
+    width: 49vw;
+    float: right;
+    background-color: rgba(59,20,173,0.11);
+    padding: 10px;
+    margin: 5px;
+    height: 300px;
+    border: 10px solid #F52854;
+    overflow: hidden;
+    border-radius: 10px 10px;
+  }
+
+  @media screen and (max-width: 790px) {
+    .contenedorprincipal {
+      width: 100vw;
+    }
+  }
+
+  @media screen and (max-width: 312px) {
+    .contenedor1, .contenedor2, .contenedor3, .contenedor4, .contenedor5 {
+      width: 100vw;
+      clear: both;
+    }
+  }
+
+</style>
+<!--Fin de la hoja
+<!-Estilo del javascript aplicado  a la factura-->
 <style>
 body {font-family: Arial, Helvetica, sans-serif;
 padding-top: 100px;}
@@ -134,18 +261,21 @@ cursor: pointer;
      <div class="contenedor2">
        <div class="row">
         <div class="col-lg-12">
-         <br>
-         <br>
-         <a class="item" href="#MisDatos">Mis Datos</a>
-         <br>
-         <br>
-         <a class="item" href="#compras">Carrito de Compras</a>
-         <br>
-         <br>
-         <a class="item" href="#facturas">Facturación</a>
-         <br>
-         <br>
-         <a class="item" href="#cambiopass">Contraseña</a>
+          <br>
+          <br>
+          <ul>
+           <li> <a class="item" href="#MisDatos">Mis Datos</a></li>
+           <br>
+            <li><a class="item" href="#compras">Carrito de Compras</a></li>
+            <br>
+            <li><a class="item" href="#facturas">Facturación</a></li>
+            <br>
+            <li></li><a class="item" href="#cambiopass">Contraseña</a>
+            <br>
+            <li><a href="#" class="btn btn-info btn-lg">
+            <span class="glyphicon glyphicon-log-out"></span>Salir
+           </a></li>
+          </ul>
        </div>
       </div>
     </div>
@@ -207,9 +337,9 @@ cursor: pointer;
          <br>
           <a href="#reset">Reestablecer contraseña</a>
          <br>
+         <br>
          <a  href="cambiar_contrasenia.php">Cambiar contraseña</a>
          <br>
-         <a class="dropdown-item" href="logout.php">Salir</a>
       </div>
     </div>
    </div>
