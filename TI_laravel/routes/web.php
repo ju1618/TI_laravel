@@ -19,13 +19,17 @@ Route::bind('product', function($slug){
 //     return view('welcome');
 // });
 
-//Ruta de perfil de usuario
-Route::get('/perfil', 'PerfilController@index')->middleware('auth');
 
-//Modificaciones del perfil de usuario
-Route::resource('perfil', 'PerfilController');
-Route::resource('perfil/create', 'PerfilController@create');
-Route::post('altaperfil', ['as' => 'perfil.store', 'uses' => 'PerfilController@store']);
+Route::get('profile', 'UserController@profile');
+Route::post('profile', 'UserController@update_avatar');
+
+// //Ruta de perfil de usuario
+// Route::get('/perfil', 'PerfilController@index')->middleware('auth');
+//
+// //Modificaciones del perfil de usuario
+// Route::resource('perfil', 'PerfilController');
+// Route::resource('perfil/create', 'PerfilController@create');
+// Route::post('altaperfil', ['as' => 'perfil.store', 'uses' => 'PerfilController@store']);
 
 //Metodo de pago: Paypal
 
@@ -54,6 +58,10 @@ Route::post('/products/addProduct', 'ProductsController@store');
 Route::get('/listado',  'ProductsController@listar');
 
 Route::get('/faq', 'FaqController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
