@@ -6,15 +6,19 @@ use Faker\Generator as Faker;
 
 $factory->define(Category::class, function (Faker $faker) {
     return [
-    	'name' => $faker->randomElement($array = [
+    	'name' => $faker->unique()->randomElement($array = [
 				'Tecnología',
-			  'Bebidas',
-			  'Autos',
+			  'Muebles',
+			  'Cocina',
 			  'Indumentaria',
 				'Alimentos',
-				'Ropa deportiva',
+				'Baño',
 				'Hogar',
 				'Jardín',
+        'Decoración',
+        'Iluminación',
+        'Accesorios',
+        'Escritorio',
 			])
     ];
 });

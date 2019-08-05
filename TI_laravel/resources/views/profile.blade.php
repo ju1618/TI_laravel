@@ -106,7 +106,7 @@ cursor: pointer;
            <div class="col-lg-12">
                 <h1 class = "item"><center>Mi Perfil, {{ $user->name }}</center></h1>
 
-                 <img src="{{asset(Auth::user()->avatar)}}" name="avatar" class="img-thumbnail img-responsive" style="width:300px; height:300px; float:center; border-radius:70%; margin-right:25px;">
+                 <img src="{{asset('storage/avatars/'.Auth::user()->avatar)}}" name="avatar" class="img-thumbnail img-responsive" style="width:300px; height:300px; float:center; border-radius:70%; margin-right:25px;">
            <form enctype="multipart/form-data" action="/profile" method="POST">
                <label>Actualizar imagen</label>
                <input type="file" name="avatar">

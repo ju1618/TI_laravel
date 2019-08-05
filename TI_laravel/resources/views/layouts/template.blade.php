@@ -41,7 +41,7 @@
           <li class="nav-item active">
             <a class= "nav-link" href="#">Productos</a>
           </li>
-          @if (Auth::user())
+          @if (!Auth::user())
             <li class="nav-item">
               <a class= "nav-link" href="/login">Ingresar</a>
             </li>
@@ -62,7 +62,7 @@
           </li>
         </ul>
         <form class="d-flex align-items-center" method="get" action="/listado">
-      		<input type="text" name="search" required="required">
+      		<input type="text" name="search" required="required" class="rounded align-self-center">
       		<input type="submit" class="btn btn-primary" value="Buscar">
       	</form>
       </div>
@@ -102,7 +102,7 @@
           <h5 class="text-center d-sm-block">Mapa del sitio</h5>
           <ol>
             <hr>
-            <li> <a href="/">Home</a> </li>
+            <li> <a href="/home">Home</a> </li>
             @if (!Auth::user())
               <li> <a href="/login">Ingresar</a> </li>
               <li> <a href="/register">Registrarse</a> </li>

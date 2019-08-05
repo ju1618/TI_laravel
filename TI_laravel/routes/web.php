@@ -55,7 +55,7 @@ Route::get('/products/addProduct', 'ProductsController@create');
 Route::post('/products/addProduct', 'ProductsController@store');
 Route::get('/listado',  'ProductsController@listar');
 
-Route::get('/faq', 'FaqController@index');
+Route::get('faq', 'FaqController@index');
 
 Auth::routes();
 
@@ -68,3 +68,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout', function(){
+   Auth::logout();
+   return Redirect::to('/');
+});
