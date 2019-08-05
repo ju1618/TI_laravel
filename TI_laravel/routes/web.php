@@ -53,8 +53,6 @@ Route::get('/',  'ProductsController@index');
 // Route::get('/','SearchController@index');
 Route::get('/products/addProduct', 'ProductsController@create');
 Route::post('/products/addProduct', 'ProductsController@store');
-// Route::get('/buscar', 'ProductsController@buscar');
-
 Route::get('/listado',  'ProductsController@listar');
 
 Route::get('/faq', 'FaqController@index');

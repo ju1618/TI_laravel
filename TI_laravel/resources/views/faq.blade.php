@@ -87,7 +87,7 @@
 
     <div id="usuarioNuevo" class="collapse" aria-labelledby="headingUsuarioNuevo" data-parent="#sesion">
       <div class="card-body faq-respuesta">
-        Podés crear una cuenta rápidamente haciendo <strong><a class="nav-link active"  href="registrer.php">click acá. </a></strong>
+        Podés crear una cuenta rápidamente haciendo <strong><a class="nav-link active"  href="/registrer">click acá. </a></strong>
         La única información que te vamos a pedir es una cuenta de correo electrónico válida y que elijas una contraseña.
         Luego de ingresar la información, te vamos a enviar un correo con un enlace para que puedas activar tu cuenta.
         Si necesitas ayuda con alguno de los pasos,  <a href="mailto:soporte.marketpalace@gmail.com"><strong>contactanos</strong></a>.
@@ -107,7 +107,7 @@
       <div class="card-body faq-respuesta">
         ¡Modificar tu contraseña es muy fácil! Sólo tenés que seguir estos simples pasos:
         <ol>
-          <li>Si es que no iniciaste sesión, ingresá a tu <strong><a class="nav-link active"  href="login">cuenta</a></strong></li>
+          <li>Si es que no iniciaste sesión, ingresá a tu <strong><a class="nav-link active"  href="/login">cuenta</a></strong></li>
           <li>Una vez que estés dentro de tu cuenta, hacé clic en "Mi Perfil".</li>
           <li>En el campo "Contraseña" hacé clic en "Cambiar".</li>
           <li>Ingresá y confirmá tu nueva contraseña, hacé clic en "Enviar" y ¡Listo!.</li>
@@ -147,7 +147,7 @@
       <div class="card-body faq-respuesta">
         Para poder publicar y gestionar tus avisos correctamente, necesitás registrar tu correo.
 
-        Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="register">link</a></strong> y completá los datos.<br>
+        Si aún no lo hiciste, Ingresá al siguiente <strong><a class="nav-link active" href="/register">link</a></strong> y completá los datos.<br>
         <strong>Pasos para publicar tu anuncio:</strong>
         <ol>
           <li>Seleccioná "Ingresar" en el menú de navegación, en el margen superior, y completá los campos con tu mail y contraseña.</li>

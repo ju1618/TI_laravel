@@ -27,7 +27,7 @@
 
     <!-------------- INICIO DEL NAV BAR ----------->
     <nav class="main-nav navbar fixed-top navbar navbar-expand-lg navbar-light">
-      <a class= "navbar-brand" href="index.php">
+      <a class= "navbar-brand" href="/home">
         <img class="logo navbar-brand" src="images/logo1.png" alt="logo tu empresa">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,24 +36,24 @@
       <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class= "nav-link" href="index.php">Home </a>
+            <a class= "nav-link" href="/home">Home </a>
           </li>
           <li class="nav-item active">
             <a class= "nav-link" href="#">Productos</a>
           </li>
           @if (Auth::user())
             <li class="nav-item">
-              <a class= "nav-link" href="login.php">Ingresar</a>
+              <a class= "nav-link" href="/login">Ingresar</a>
             </li>
             <li class="nav-item">
-              <a class= "nav-link" href="registrer.php">Registrarse</a>
+              <a class= "nav-link" href="/registrer">Registrarse</a>
             </li>
           @else
             <li class="nav-item">
-              <a class= "nav-link" href="perfilusuario.php">Perfil</a>
+              <a class= "nav-link" href="/profile">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class= "nav-link" href="logout.php">Cerrar Sesión</a>
+              <a class= "nav-link" href="/logout">Cerrar Sesión</a>
             </li>
           @endif
 
@@ -102,15 +102,15 @@
           <h5 class="text-center d-sm-block">Mapa del sitio</h5>
           <ol>
             <hr>
-            <li> <a href="index.php">Home</a> </li>
+            <li> <a href="/">Home</a> </li>
             @if (!Auth::user())
-              <li> <a href="login.php">Ingresar</a> </li>
-              <li> <a href="registrer.php">Registrarse</a> </li>
+              <li> <a href="/login">Ingresar</a> </li>
+              <li> <a href="/register">Registrarse</a> </li>
             @else
-              <li> <a href="perfilusuario.php">Perfil</a> </li>
-              <li> <a href="logout.php">Cerrar Sesión</a> </li>
+              <li> <a href="/profile">Perfil</a> </li>
+              <li> <a href="/logout">Cerrar Sesión</a> </li>
             @endif
-            <li> <a href="faqs.php">FAQ</a> </li>
+            <li> <a href="/faq">FAQ</a> </li>
           </ol>
         </div>
         <div class="contacto justify-content-center">
@@ -139,7 +139,7 @@
     <hr>
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
       <p class="float-left" style="color: #000;">&copy; 2019 Trabajo Integrador DH. </p>
-      <p class="float-right footer-link" style="color: #000;"><a href="index.php">-Home- </a></p>
+      <p class="float-right footer-link" style="color: #000;"><a href="/">-Home- </a></p>
       <p class="float-right footer-link" style="color: #000;"><a href="#">-Volver arriba-</a></p>
     </div>
 
@@ -149,7 +149,6 @@
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <!-- <script src="/js/bootstrap.min.js"></script> -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </html>

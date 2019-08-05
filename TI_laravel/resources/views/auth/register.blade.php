@@ -189,10 +189,10 @@
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 mi-sidebar">
             <ul class="nav navbar-nav list-inline">
-                <li class="list-inline-item"><a class="" href="index.php"><i class="fas fa-home"></i></a></li>
-                <li class="list-inline-item"><a class="" href="faqs.php"><i class="fas fa-question"></i></li>
+                <li class="list-inline-item"><a class="" href="/home"><i class="fas fa-home"></i></a></li>
+                <li class="list-inline-item"><a class="" href="/faq"><i class="fas fa-question"></i></li>
                 <li class="list-inline-item"><a class="" href="#"><i class="fas fa-headset"></i></li>
-								<li class="list-inline-item"><a class="" href="perfilusuario.php"><i class="fas fa-user-alt"></i></a></li>
+								<li class="list-inline-item"><a class="" href="/profile"><i class="fas fa-user-alt"></i></a></li>
             </ul>
           </div>
       </div>

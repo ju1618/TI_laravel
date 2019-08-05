@@ -27,4 +27,5 @@ class DatabaseSeeder extends Seeder
 				$oneProduct->save();
 			}
     }
+  }
   
