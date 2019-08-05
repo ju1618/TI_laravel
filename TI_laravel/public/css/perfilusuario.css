@@ -46,8 +46,8 @@ img{
   width: 60%;
   background-color: rgba(75,145,214,0.11);
   float: right;
-  padding: 30px;
-  margin: 10px;
+  padding: 4px;
+  margin: 5px;
   height: 380px;
   overflow: hidden;
   border-radius: 10px 10px;
@@ -93,8 +93,8 @@ img{
   width: 60%;
   float: right;
   background-color: rgba(59,20,173,0.11);
-  padding: 15px;
-  margin: 8px;
+  padding: 10px;
+  margin: 5px;
   height: 300px;
   border: 10px solid #F52854;
   overflow: hidden;
