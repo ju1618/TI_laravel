@@ -2,8 +2,6 @@
 @section ('pageTitle','Profile')
 
 @extends('layouts.template')
-<!-- Vinculación externa de CSS-->
-<link rel="stylesheet" href="/css/perfilusuario.css">
 
 @section('content')
 
@@ -52,7 +50,7 @@
     clear: both;
     padding: 8px;
     margin: 8px;
-    height: 1700px;
+    height: 155vh;
     border-radius: 10px 10px;
     text-align: center;
     overflow: hidden;
@@ -65,7 +63,7 @@
     float: right;
     padding: 4px;
     margin: 5px;
-    height: 380px;
+    height: 65vh;
     overflow: hidden;
     border-radius: 10px 10px;
     border: 10px solid #F52854;
@@ -82,7 +80,7 @@
     background-color: beige;
     padding: 20px;
     margin: 10px;
-    height: 440px;
+    height: 77vh;
     border: 10px solid #F52854;
     overflow: hidden;
     border-radius: 10px 10px;
@@ -94,7 +92,7 @@
     background-color: #F52854;
     padding: 15px;
     margin: 8px;
-    height: 550px;
+    height: 85vh;
     border: 10px solid #F52854;
     overflow: hidden;
     border-radius: 10px 10px;
@@ -112,7 +110,7 @@
     background-color: rgba(59,20,173,0.11);
     padding: 10px;
     margin: 5px;
-    height: 300px;
+    height: 45vh;
     border: 10px solid #F52854;
     overflow: hidden;
     border-radius: 10px 10px;
@@ -238,6 +236,7 @@ cursor: pointer;
                <label>Actualizar imagen</label>
                <input type="file" name="avatar">
                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+               <input type="hidden" name="id" value="{{ Auth::user()->id }}">
                <br>
                <br>
                <input type="submit" class="pull-right btn btn-sm btn-primary">
@@ -271,6 +270,7 @@ cursor: pointer;
             <li><a class="item" href="#facturas">Facturación</a></li>
             <br>
             <li></li><a class="item" href="#cambiopass">Contraseña</a>
+            <br>
             <br>
             <li><a href="#" class="btn btn-info btn-lg">
             <span class="glyphicon glyphicon-log-out"></span>Salir
