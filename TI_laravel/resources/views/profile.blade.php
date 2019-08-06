@@ -20,7 +20,7 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 30px;
-    padding-top: 100px;
+    padding-top: 70px;
     background-image: url("../images/gg.jpg");
     background-size: cover;
   }
@@ -50,7 +50,7 @@
     clear: both;
     padding: 8px;
     margin: 8px;
-    height: 155vh;
+    height: 185vh;
     border-radius: 10px 10px;
     text-align: center;
     overflow: hidden;
@@ -239,21 +239,27 @@ cursor: pointer;
                <input type="hidden" name="id" value="{{ Auth::user()->id }}">
                <br>
                <br>
+               <h2 id="MisDatos" class = "item"><em><strong><center>Mis datos</center></strong></em></li></h2>
+               <br>
+               <p><strong>Usuario: </strong></p>
+               <input type="text" name="username" value="{{ $user->username }}">
+               <br>
+               <p><strong>Nombre: </strong>   </p>
+               <input type="text" name="name" value="{{ $user->name }}">
+              <p><strong>Apellido: </strong>   </p>
+               <input type="text" name="lastname" value="{{ $user->lastname}}">
+               <br>
+               <p><strong>Pais: </strong>  </p>
+               <input type="text" name="country" value="{{ $user->country }}">
+               <br>
+               <p><strong>Email: </strong></p>
+               <input type="text" name="email" value="{{ $user->email }}">
+               <br>
+               <br>
+               <br>
                <input type="submit" class="pull-right btn btn-sm btn-primary">
                <br>
-           </form>
-           <br>
-           <h2 id="MisDatos" class = "item"><em><strong><center>Mis datos</center></strong></em></li></h2>
-           <br>
-           <p><strong>Usuario: </strong>  {{ $user->username }} </p>
-           <br>
-           <p><strong>Nombre: </strong> {{ $user->name }} {{ $user->lastname}} </p>
-           <br>
-           <p><strong>Pais: </strong>  {{ $user->country }}</p>
-           <br>
-           <p><strong>Email: </strong> {{ $user->email }} </p>
-           <br>
-           <br>
+            </form>
         </div>
       </div>
      </div>

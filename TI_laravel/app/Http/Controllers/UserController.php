@@ -14,9 +14,16 @@ class UserController extends Controller
     public function profile(){
       return view('profile', array('user' => Auth::user()) );
     }
+
     public function update_avatar(Request $request){
 
       $userToUpdate = User::find($request->id);
+
+      $userToUpdate->username = $request->input('username');
+	   	$userToUpdate->name = $request->input('name');
+      $userToUpdate->lastname = $request->input('lastname');
+		  $userToUpdate->country = $request->input('country');
+      $userToUpdate->email = $request->input('email');
 
       $imagen = $request->file('avatar');
       if($imagen){
@@ -92,7 +99,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+      // Busco la Movie
+      $userToEdit = User::find($id);
     }
 
     /**

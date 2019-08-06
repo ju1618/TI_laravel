@@ -21,15 +21,15 @@ Route::bind('product', function($slug){
 
 
 Route::get('profile', 'UserController@profile');
+// // //Modificaciones del perfil de usuario
 Route::post('profile', 'UserController@update_avatar');
 
 // //Ruta de perfil de usuario
 // Route::get('/perfil', 'PerfilController@index')->middleware('auth');
-//
-// //Modificaciones del perfil de usuario
-// Route::resource('perfil', 'PerfilController');
-// Route::resource('perfil/create', 'PerfilController@create');
-// Route::post('altaperfil', ['as' => 'perfil.store', 'uses' => 'PerfilController@store']);
+
+
+
+
 
 //Metodo de pago: Paypal
 
