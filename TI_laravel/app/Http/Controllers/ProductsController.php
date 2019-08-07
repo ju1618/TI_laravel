@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
 
 class ProductsController extends Controller
 {
@@ -16,10 +17,10 @@ class ProductsController extends Controller
     {
         //
 
-         $products=Product::all();
-
+        $products=Product::paginate(3);
+        $categories=Category::all();
         // return view('products.index', compact('products'));
-        return view('layouts.template', compact('products'));
+        return view('index', compact('products', 'categories'));
 
     }
 

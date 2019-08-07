@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->string('title');
-            $table->string('product-image');
+            $table->string('product_image');
             $table->bigInteger('price');
             // $table->string('category')->nullable();
             $table->unsignedBigInteger('category_id')->nullable();

@@ -69,7 +69,10 @@
     </nav>
     <!-- ------------ FIN DEL NAVBAR -------- -->
 
+    <!-- HEADER -->
+    @yield('header')
 
+    <!-- CONTENEDOR DE PRODUCTOS -->
     @yield('content')
 
 
