@@ -43,14 +43,14 @@
       overflow: auto;
   }
 
-  .contenedor1 {
-    width: 28vw ;
+  .tap-sport-tools {
+    width: 28vw;
     background-color: #4bd1b6;
     float: left;
     clear: both;
     padding: 8px;
     margin: 8px;
-    height: 185vh;
+    height: 205vh;
     border-radius: 10px 10px;
     text-align: center;
     overflow: hidden;
@@ -92,7 +92,7 @@
     background-color: #F52854;
     padding: 15px;
     margin: 8px;
-    height: 85vh;
+    height: 90vh;
     border: 10px solid #F52854;
     overflow: hidden;
     border-radius: 10px 10px;
@@ -116,7 +116,7 @@
     border-radius: 10px 10px;
   }
 
-  @media screen and (max-width: 790px) {
+  /* @media screen and (max-width: 790px) {
     .contenedorprincipal {
       width: 100vw;
     }
@@ -126,7 +126,7 @@
     .contenedor1, .contenedor2, .contenedor3, .contenedor4, .contenedor5 {
       width: 100vw;
       clear: both;
-    }
+    } */
   }
 
 </style>
@@ -226,9 +226,9 @@ cursor: pointer;
 <!---Fin de la hoja de estilo del JS-->
 
     <div class="container">
-       <div class="contenedor1">
+       <div data-type="timetable" data-id="85503" id="wgt-85503" class="tap-sport-tools" style="width:100%; height:auto;">
          <div class="row">
-           <div class="col-lg-12">
+           <div class="col-xs-4 col-sm-5 col-lg-12">
                 <h1 class = "item"><center>Mi Perfil, {{ $user->name }}</center></h1>
 
                  <img src="{{asset('storage/avatars/'.Auth::user()->avatar)}}" name="avatar" class="img-thumbnail img-responsive" style="width:300px; height:300px; float:center; border-radius:70%; margin-right:25px;">
@@ -263,9 +263,9 @@ cursor: pointer;
         </div>
       </div>
      </div>
-     <div class="contenedor2">
+     <div id="wgt-ft-85503" style="width:100%" class="contenedor2">
        <div class="row">
-        <div class="col-lg-12">
+        <div class="col-xs-8 col-sm-7 col-lg-12">
           <br>
           <br>
           <ul>
@@ -285,9 +285,9 @@ cursor: pointer;
        </div>
       </div>
     </div>
-      <div class="contenedor3">
+      <div class="contenedor3" id="wgt-ft-85503" style="width:100%">
         <div class="row">
-         <div class="col-lg-12">
+         <div class="col-xs-8 col-sm-7 col-lg-12">
          <br>
          <h2 id="compras" class="item"><em><strong><center>Carrito de Compras</center></strong></em></li></h2>
          <br>
@@ -296,9 +296,9 @@ cursor: pointer;
       </div>
     </div>
    </div>
-      <div class="contenedor4">
+      <div class="contenedor4" id="wgt-ft-85503" style="width:100%">
         <div class="row">
-         <div class="col-lg-12">
+         <div class="col-xs-8 col-sm-7 col-lg-12">
          <br>
          <h2 id="facturas" class="item"><em><strong><center>Facturación</center></strong></em></li></h2>
           <img id="myImg" class="facturadecompra"  src="/images/facturamp.png" alt="factura de compra" style="width:100%;max-width:300px">
@@ -335,9 +335,9 @@ cursor: pointer;
       </div>
     </div>
    </div>
-      <div class="contenedor5">
+      <div class="contenedor5" id="wgt-ft-85503" style="width:100%">
         <div class="row">
-         <div class="col-lg-12">
+         <div class="col-xs-8 col-sm-7 col-lg-12">
          <br>
          <h2 id="cambiopass" class="item"><em><strong><center>Contraseña</center></strong></em></h2>
          <br>
