@@ -50,7 +50,7 @@
     clear: both;
     padding: 8px;
     margin: 8px;
-    height: 205vh;
+    height: auto;
     border-radius: 10px 10px;
     text-align: center;
     overflow: hidden;
@@ -63,7 +63,7 @@
     float: right;
     padding: 4px;
     margin: 5px;
-    height: 65vh;
+    height: auto;
     overflow: hidden;
     border-radius: 10px 10px;
     border: 10px solid #F52854;
@@ -92,7 +92,7 @@
     background-color: #F52854;
     padding: 15px;
     margin: 8px;
-    height: 90vh;
+    height: auto;
     border: 10px solid #F52854;
     overflow: hidden;
     border-radius: 10px 10px;
@@ -110,7 +110,7 @@
     background-color: rgba(59,20,173,0.11);
     padding: 10px;
     margin: 5px;
-    height: 45vh;
+    height: auto;
     border: 10px solid #F52854;
     overflow: hidden;
     border-radius: 10px 10px;
@@ -228,7 +228,7 @@ cursor: pointer;
     <div class="container">
        <div data-type="timetable" data-id="85503" id="wgt-85503" class="tap-sport-tools" style="width:100%; height:auto;">
          <div class="row">
-           <div class="col-xs-4 col-sm-5 col-lg-12">
+           <div class="col-lg-12">
                 <h1 class = "item"><center>Mi Perfil, {{ $user->name }}</center></h1>
 
                  <img src="{{asset('storage/avatars/'.Auth::user()->avatar)}}" name="avatar" class="img-thumbnail img-responsive" style="width:300px; height:300px; float:center; border-radius:70%; margin-right:25px;">
@@ -265,7 +265,7 @@ cursor: pointer;
      </div>
      <div id="wgt-ft-85503" style="width:100%" class="contenedor2">
        <div class="row">
-        <div class="col-xs-8 col-sm-7 col-lg-12">
+        <div class="col-lg-12">
           <br>
           <br>
           <ul>
@@ -287,7 +287,7 @@ cursor: pointer;
     </div>
       <div class="contenedor3" id="wgt-ft-85503" style="width:100%">
         <div class="row">
-         <div class="col-xs-8 col-sm-7 col-lg-12">
+         <div class="col-lg-12">
          <br>
          <h2 id="compras" class="item"><em><strong><center>Carrito de Compras</center></strong></em></li></h2>
          <br>
@@ -298,7 +298,7 @@ cursor: pointer;
    </div>
       <div class="contenedor4" id="wgt-ft-85503" style="width:100%">
         <div class="row">
-         <div class="col-xs-8 col-sm-7 col-lg-12">
+         <div class="col-lg-12">
          <br>
          <h2 id="facturas" class="item"><em><strong><center>Facturación</center></strong></em></li></h2>
           <img id="myImg" class="facturadecompra"  src="/images/facturamp.png" alt="factura de compra" style="width:100%;max-width:300px">
@@ -337,7 +337,7 @@ cursor: pointer;
    </div>
       <div class="contenedor5" id="wgt-ft-85503" style="width:100%">
         <div class="row">
-         <div class="col-xs-8 col-sm-7 col-lg-12">
+         <div class="col-lg-12">
          <br>
          <h2 id="cambiopass" class="item"><em><strong><center>Contraseña</center></strong></em></h2>
          <br>
